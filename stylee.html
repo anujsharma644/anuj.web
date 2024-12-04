@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 480px;
+            width: 480px;
+            border: 10px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="">Hello world 
+        <div class="box" id="box"></div>
+    </h1>
+    <h1 Id="name"> Hello </h1>
+
+    <script>
+        console.log("This is JS from frontend")
+
+//for(let i=0;<10,i++){
+//    console.log(i)
+//   console.log("This is anuj sharma")
+//}
+//let i=0; 
+//while(i<11){
+//   console.log(`This is while loop running ${i} time`)
+//    i++;
+//}
+
+// let j=1000;
+// do{
+//     console.log(`This is do while running ${j} time`)
+//     j++;
+// } while(j<11);
+
+const changebox=()=>{
+    document.getElementById("box").style.color="yellow"
+}
+const changeBox=()=>{
+    document.getElementById("box").style.backgroundColor="red";
+    document.getElementById("box").style.borderRadius="50%";
+
+}
+
+setTimeout(()=>{
+    changebox()
+    changebox()
+},5000)
+
+const fruits = ["apple","mango","pine","grapes","papaya","banana"];
+console.log(fruits[2]);
+
+const vegetables = ["patato","onion","ladyfinger","tomato"];
+console.log(vegetables[1]);
+
+const ages=[77,10,20,40,50,70,27,7]
+console.log(ages.sort())
+//ascending order
+console.log(ages.sort((a,b)=>a-b))
+// descending order
+console.log(ages.sort((a,b)=>b-a))
+
+// mapping
+ages.map((x)=>{
+    console.log(`I am ${x} years old using map 🥲`)
+})
+// for each
+ages.forEach((x)=>{
+    console.log(`I am ${x} years old using for each 🥲`)
+})
+
+// filter
+const voters = ages.filter((age)=>age>18)
+console.log(voters)
+const retaired = ages.filter((age)=>age>60)
+console.log(retaired)
+
+// Task 5
+// filter an array (retired) for people above 60
+
+const students=["rohan","anuj","shubham","kunal","sunny"]
+const slicedArrey=students.slice(2,4)
+console.log(slicedArrey)
+
+// Splice in arrey
+console.log("Original arrey",students)
+const splicedArrey=students.slice(2,1,"anuj")
+console.log(students)
+
+// include
+const CheckName=students.includes("anuj")
+console.log(CheckName)
+
+const sampleNegative=students.at(-4)
+console.log(sampleNegative)
+
+//let
+//var
+//const
+var name="anuj"
+var name="anujs"
+function myFunction(){
+    console.log(name)
+}
+myFunction()
+
+let age=false
+
+// Objects
+
+let student={
+    name:"Sonu",
+    class:"XII",
+    rollNo:12,
+    marks:90
+}
+
+const car={
+    name:"Audio",
+    model:"VI",
+    year:2011
+}
+
+console.log("These are the values",Object.values(car))
+console.log("These are the keys",Object.keys(car))
+
+// nested object
+const car2={
+    name:"Audio",
+    model:"VI",
+    year:2011,
+    feature:{
+        color:["red","yellow","green"],
+        engine:"V0",
+        top_speed:'400 km/hr'
+    }
+}
+    </script>
+    
+</body>
+</html>
